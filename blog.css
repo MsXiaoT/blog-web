@@ -1,6 +1,6 @@
 body {
     font-family: 'Roboto', sans-serif;
-    background-image: url('images/生成博客背景图.png');
+    background-image: url('background.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -27,6 +27,15 @@ header {
     color: white;
 }
 
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+    float: left;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
@@ -49,12 +58,27 @@ nav ul li a:hover {
     color: #00bcd4;
 }
 
-section {
-    padding: 20px;
+#about-and-skills {
+    display: flex;
+    justify-content: space-between; /* 水平间距 */
     margin: 20px 0;
+}
+
+#about-and-skills .about,
+#about-and-skills .skills {
+    flex: 1; /* 等比例分配空间 */
+    padding: 20px;
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#about-and-skills .about {
+    margin-right: 20px; /* 右边距 */
+}
+
+#about-and-skills .skills {
+    margin-left: 20px; /* 左边距 */
 }
 
 .project {
@@ -66,6 +90,57 @@ section {
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border-radius: 8px;
+}
+
+#write-blog {
+    padding: 20px;
+    margin: 20px 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#writeBlogForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#writeBlogForm label {
+    font-weight: bold;
+}
+
+#writeBlogForm input,
+#writeBlogForm textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+#writeBlogForm input:focus,
+#writeBlogForm textarea:focus {
+    border-color: #00bcd4;
+    box-shadow: 0 0 5px rgba(0, 188, 212, 0.5);
+}
+
+#writeBlogForm button {
+    background-color: rgba(0, 188, 212, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+#writeBlogForm button:hover {
+    background-color: rgba(0, 151, 167, 0.7);
+    transform: scale(1.05);
 }
 
 #contactForm {
@@ -87,59 +162,115 @@ section {
 #contactForm input,
 #contactForm textarea {
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: border-color 0.3s ease;
+    border: 1px
+}
+.blog-post button {
+    margin-top: 10px;
+    padding: 6px 12px;
+    font-size: 14px;
+    background-color: rgba(255, 87, 34, 0.7); /* 红色背景 */
+    border: none;
+    color: white;
+    cursor: pointer;
 }
 
-#contactForm input:focus,
-#contactForm textarea:focus {
+.blog-post button:hover {
+    background-color: rgba(255, 87, 34, 0.9);
+    transform: scale(1.05);
+}
+/* 模态登录框样式 */
+ /* 模态登录框样式 */
+.modal {
+    display: none;
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    width: 320px;
+    padding: 25px;
+    z-index: 1000;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.modal h3 {
+    margin-top: 0;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.modal label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.modal input[type="password"] {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.modal input:focus {
+    outline: none;
     border-color: #00bcd4;
+    background-color: rgba(255, 255, 255, 0.2);
     box-shadow: 0 0 5px rgba(0, 188, 212, 0.5);
 }
 
-#contactForm button {
-    background-color: rgba(0, 188, 212, 0.6);
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    color: white;
-    padding: 10px 20px;
+.modal button {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
     font-size: 16px;
-    border-radius: 5px;
+    font-weight: bold;
+    background-color: rgba(0, 188, 212, 0.7);
+    border: none;
+    border-radius: 6px;
+    color: white;
     cursor: pointer;
     transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
 }
 
-#contactForm button:hover {
-    background-color: rgba(0, 151, 167, 0.7);
+.modal button:hover {
+    background-color: rgba(0, 151, 167, 0.9);
+    transform: scale(1.03);
+}
+
+.modal p#loginStatus {
+    margin-top: 10px;
+    color: #ffcccb;
+    font-size: 14px;
+    text-align: center;
+}
+.blog-post button {
+    margin-top: 10px;
+    padding: 6px 12px;
+    font-size: 14px;
+    background-color: rgba(255, 87, 34, 0.7); /* 红色背景 */
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.blog-post button:hover {
+    background-color: rgba(255, 87, 34, 0.9);
     transform: scale(1.05);
 }
-
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .project {
-        padding: 10px;
-    }
-
-    #contactForm {
-        padding: 10px;
-    }
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-button {
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-button:hover {
-    transform: scale(1.05);
+#visitor-count {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 14px;
+    z-index: 999;
 }
