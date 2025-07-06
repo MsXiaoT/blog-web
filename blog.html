@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh">
+
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -9,6 +10,7 @@
     <title>我的个人主页</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
         <img src="头像.jpg" alt="头像" class="avatar">
@@ -34,7 +36,7 @@
         <div class="about">
             <h2>关于我</h2>
             <p><i class="fab fa-qq"></i> qq:2408710670</p>
-            <p><i class="fab fa-bilibili"></i> bilibili:萌神小天</p>
+            <p><i class="fab fa-bilibili" link href="https://space.bilibili.com/455172199?spm_id_from=333.1387.0.0"></i> bilibili:萌神小天</p>
             <p>我是一名热爱编程的前端开发人员，擅长HTML、CSS和JavaScript。</p>
             <p>我正在学习我的世界addons,Java后端,unity引擎</p>
         </div>
@@ -81,13 +83,13 @@
         <form id="contactForm">
             <label for="name">姓名:</label>
             <input type="text" id="name" name="name" required>
-            
+
             <label for="email">邮箱:</label>
             <input type="email" id="email" name="email" required>
-            
+
             <label for="message">留言:</label>
             <textarea id="message" name="message" required></textarea>
-            
+
             <button type="submit">发送</button>
         </form>
         <p id="formResponse"></p>
@@ -109,5 +111,9 @@
     </div>
 
     <script src="blog.js"></script>
+    <div id="visitor-count" class="glass-effect">
+        累计访问人数：0 人
+    </div>
 </body>
+
 </html>
