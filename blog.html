@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/brands.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人主页</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="images/头像.jpg" alt="头像" class="avatar">
+        <h1>你好，我是小天</h1>
+
+        <!-- 右上角登录按钮 -->
+        <div class="login-button-container">
+            <button id="loginToggleBtn" class="glass-effect">登录</button>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#about-and-skills"><i class="fas fa-user"></i> 关于我 & 技能</a></li>
+                <li><a href="#projects">项目</a></li>
+                <li><a href="#contact">联系我</a></li>
+                <li><a href="#write-blog">写博客</a></li>
+                <li><a href="#blogs">我的博客</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about-and-skills">
+        <div class="about">
+            <h2>关于我</h2>
+            <p><i class="fab fa-qq"></i> qq:2408710670</p>
+            <p><i class="fab fa-bilibili"></i> bilibili:萌神小天</p>
+            <p>我是一名热爱编程的前端开发人员，擅长HTML、CSS和JavaScript。</p>
+            <p>我正在学习我的世界addons,Java后端,unity引擎</p>
+        </div>
+        <div class="skills">
+            <h2>技能</h2>
+            <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>c,c++,c#</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>项目</h2>
+        <div class="project">
+            <h3>项目一：个人博客</h3>
+        </div>
+        <div class="project"></div>
+    </section>
+
+    <section id="write-blog">
+        <h2>在线写博客</h2>
+        <form id="writeBlogForm">
+            <label for="blogTitle">标题:</label>
+            <input type="text" id="blogTitle" name="blogTitle" required>
+
+            <label for="blogContent">内容:</label>
+            <textarea id="blogContent" name="blogContent" required></textarea>
+
+            <button type="submit">发布</button>
+        </form>
+        <p id="blogResponse"></p>
+    </section>
+
+    <section id="blogs">
+        <h2>我的博客</h2>
+        <div id="blog-container"></div>
+    </section>
+
+    <section id="contact">
+        <h2>联系我</h2>
+        <form id="contactForm">
+            <label for="name">姓名:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">邮箱:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">留言:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">发送</button>
+        </form>
+        <p id="formResponse"></p>
+    </section>
+
+    <footer>
+        <p>&copy; Ms_XiaoTian. 保留所有权利。</p>
+    </footer>
+
+    <!-- 登录浮窗 -->
+    <div id="loginModal" class="modal glass-effect">
+        <form id="loginForm">
+            <h3>管理员登录</h3>
+            <label for="adminPassword">密码:</label>
+            <input type="password" id="adminPassword" name="adminPassword" required>
+            <button type="submit">提交</button>
+            <p id="loginStatus"></p>
+        </form>
+    </div>
+
+    <script src="blog.js"></script>
+</body>
+</html>
