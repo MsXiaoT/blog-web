@@ -7,6 +7,7 @@ function init() {
     setupLoginHandler();
     setupBlogFormHandler();
     displayBlogs();
+    updateVisitorCount();
 }
 
 // 设置登录行为
@@ -96,6 +97,23 @@ function deleteBlog(index) {
         displayBlogs();
     }
 }
+// 更新访问人数
+function updateVisitorCount() {
+    let count = localStorage.getItem('visitorCount');
 
+    if (!count) {
+        // 第一次访问
+        localStorage.setItem('visitorCount', '1');
+        count = 1;
+    } else {
+        count = parseInt(count) + 1;
+        localStorage.setItem('visitorCount', count.toString());
+    }
+
+    const visitorElement = document.getElementById('visitor-count');
+    if (visitorElement) {
+        visitorElement.textContent = `访问人数：${count} 人`;
+    }
+}
 // 页面加载时初始化
 window.addEventListener('DOMContentLoaded', init);
