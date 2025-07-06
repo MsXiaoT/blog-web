@@ -60,13 +60,13 @@ nav ul li a:hover {
 
 #about-and-skills {
     display: flex;
-    justify-content: space-between; /* 水平间距 */
+    justify-content: space-between; /* 姘村钩闂磋窛 */
     margin: 20px 0;
 }
 
 #about-and-skills .about,
 #about-and-skills .skills {
-    flex: 1; /* 等比例分配空间 */
+    flex: 1; /* 绛夋瘮渚嬪垎閰嶇┖闂� */
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 8px;
@@ -74,11 +74,11 @@ nav ul li a:hover {
 }
 
 #about-and-skills .about {
-    margin-right: 20px; /* 右边距 */
+    margin-right: 20px; /* 鍙宠竟璺� */
 }
 
 #about-and-skills .skills {
-    margin-left: 20px; /* 左边距 */
+    margin-left: 20px; /* 宸﹁竟璺� */
 }
 
 .project {
@@ -168,7 +168,7 @@ nav ul li a:hover {
     margin-top: 10px;
     padding: 6px 12px;
     font-size: 14px;
-    background-color: rgba(255, 87, 34, 0.7); /* 红色背景 */
+    background-color: rgba(255, 87, 34, 0.7); /* 绾㈣壊鑳屾櫙 */
     border: none;
     color: white;
     cursor: pointer;
@@ -178,22 +178,85 @@ nav ul li a:hover {
     background-color: rgba(255, 87, 34, 0.9);
     transform: scale(1.05);
 }
-/* 模态登录框样式 */
+/* 妯℃€佺櫥褰曟鏍峰紡 */
+ /* 妯℃€佺櫥褰曟鏍峰紡 */
 .modal {
-    display: none; /* 默认隐藏 */
+    display: none;
     position: fixed;
     top: 60px;
     right: 20px;
-    width: 300px;
-    padding: 20px;
+    width: 320px;
+    padding: 25px;
     z-index: 1000;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.modal h3 {
+    margin-top: 0;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.modal label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.modal input[type="password"] {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.modal input:focus {
+    outline: none;
+    border-color: #00bcd4;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 5px rgba(0, 188, 212, 0.5);
+}
+
+.modal button {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: rgba(0, 188, 212, 0.7);
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.modal button:hover {
+    background-color: rgba(0, 151, 167, 0.9);
+    transform: scale(1.03);
+}
+
+.modal p#loginStatus {
+    margin-top: 10px;
+    color: #ffcccb;
+    font-size: 14px;
+    text-align: center;
 }
 .blog-post button {
     margin-top: 10px;
     padding: 6px 12px;
     font-size: 14px;
-    background-color: rgba(255, 87, 34, 0.7); /* 红色背景 */
+    background-color: rgba(255, 87, 34, 0.7); /* 绾㈣壊鑳屾櫙 */
     border: none;
     color: white;
     cursor: pointer;
@@ -202,4 +265,12 @@ nav ul li a:hover {
 .blog-post button:hover {
     background-color: rgba(255, 87, 34, 0.9);
     transform: scale(1.05);
+}
+#visitor-count {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 14px;
+    z-index: 999;
 }
