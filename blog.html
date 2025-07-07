@@ -19,6 +19,7 @@
         <!-- 右上角登录按钮 -->
         <div class="login-button-container">
             <button id="loginToggleBtn" class="glass-effect">登录</button>
+            <button id="logoutBtn" class="glass-effect" style="display: none;">注销</button>
         </div>
 
         <nav>
@@ -28,6 +29,8 @@
                 <li><a href="#contact">联系我</a></li>
                 <li><a href="#write-blog">写博客</a></li>
                 <li><a href="#blogs">我的博客</a></li>
+                <li><button onclick="toggleDarkMode()" class="glass-effect">切换暗黑模式</button></li>
+                <li><button onclick="forceClearBlogs()" class="glass-effect">清空数据</button></li>
             </ul>
         </nav>
     </header>
@@ -107,6 +110,20 @@
             <input type="password" id="adminPassword" name="adminPassword" required>
             <button type="submit">提交</button>
             <p id="loginStatus"></p>
+        </form>
+    </div>
+
+    <!-- 编辑博客模态框 -->
+    <div id="editBlogModal" class="modal glass-effect">
+        <form id="editBlogForm">
+            <h3>编辑博客</h3>
+            <label for="editBlogTitle">标题:</label>
+            <input type="text" id="editBlogTitle" name="editBlogTitle" required>
+
+            <label for="editBlogContent">内容:</label>
+            <textarea id="editBlogContent" name="editBlogContent" required></textarea>
+
+            <button type="submit">保存</button>
         </form>
     </div>
 
