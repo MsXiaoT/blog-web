@@ -1,3 +1,4 @@
+/* === 全局样式 === */
 body {
     font-family: 'Roboto', sans-serif;
     background-image: url('background.png');
@@ -20,6 +21,26 @@ body::before {
     z-index: -1;
 }
 
+/* === 暗黑模式样式 === */
+body.dark-mode {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+}
+
+body.dark-mode::before {
+    background: none;
+}
+
+body.dark-mode .blog-post {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #f0f0f0;
+}
+
+body.dark-mode .blog-post button {
+    background-color: rgba(255, 87, 34, 0.6);
+}
+
+/* === 导航栏样式 === */
 header {
     text-align: center;
     padding: 20px;
@@ -58,15 +79,16 @@ nav ul li a:hover {
     color: #00bcd4;
 }
 
+/* === 关于我 & 技能样式 === */
 #about-and-skills {
     display: flex;
-    justify-content: space-between; /* 姘村钩闂磋窛 */
+    justify-content: space-between; /* 水平间距 */
     margin: 20px 0;
 }
 
 #about-and-skills .about,
 #about-and-skills .skills {
-    flex: 1; /* 绛夋瘮渚嬪垎閰嶇┖闂� */
+    flex: 1; /* 等比例分配空间 */
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 8px;
@@ -74,13 +96,14 @@ nav ul li a:hover {
 }
 
 #about-and-skills .about {
-    margin-right: 20px; /* 鍙宠竟璺� */
+    margin-right: 20px; /* 右边距 */
 }
 
 #about-and-skills .skills {
-    margin-left: 20px; /* 宸﹁竟璺� */
+    margin-left: 20px; /* 左边距 */
 }
 
+/* === 项目样式 === */
 .project {
     background: rgba(255, 255, 255, 0.2);
     border-left: 5px solid #00bcd4;
@@ -92,6 +115,7 @@ nav ul li a:hover {
     border-radius: 8px;
 }
 
+/* === 写博客样式 === */
 #write-blog {
     padding: 20px;
     margin: 20px 0;
@@ -143,32 +167,20 @@ nav ul li a:hover {
     transform: scale(1.05);
 }
 
-#contactForm {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
+/* === 博客展示样式 === */
+.blog-post {
+    margin-top: 20px;
+    padding: 15px;
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-#contactForm label {
-    font-weight: bold;
-}
-
-#contactForm input,
-#contactForm textarea {
-    padding: 10px;
-    border: 1px
-}
 .blog-post button {
     margin-top: 10px;
     padding: 6px 12px;
     font-size: 14px;
-    background-color: rgba(255, 87, 34, 0.7); /* 绾㈣壊鑳屾櫙 */
+    background-color: rgba(255, 87, 34, 0.7); /* 红色背景 */
     border: none;
     color: white;
     cursor: pointer;
@@ -178,8 +190,40 @@ nav ul li a:hover {
     background-color: rgba(255, 87, 34, 0.9);
     transform: scale(1.05);
 }
-/* 妯℃€佺櫥褰曟鏍峰紡 */
- /* 妯℃€佺櫥褰曟鏍峰紡 */
+
+/* === 评论区样式 === */
+.comments-section {
+    margin-top: 20px;
+}
+
+.comment-list li {
+    margin-bottom: 10px;
+}
+
+.comment-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    resize: none;
+}
+
+.comment-form button {
+    margin-top: 10px;
+    padding: 6px 12px;
+    font-size: 14px;
+    background-color: rgba(0, 188, 212, 0.6);
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.comment-form button:hover {
+    background-color: rgba(0, 151, 167, 0.7);
+}
+
+/* === 登录模态框样式 === */
 .modal {
     display: none;
     position: fixed;
@@ -252,20 +296,8 @@ nav ul li a:hover {
     font-size: 14px;
     text-align: center;
 }
-.blog-post button {
-    margin-top: 10px;
-    padding: 6px 12px;
-    font-size: 14px;
-    background-color: rgba(255, 87, 34, 0.7); /* 绾㈣壊鑳屾櫙 */
-    border: none;
-    color: white;
-    cursor: pointer;
-}
 
-.blog-post button:hover {
-    background-color: rgba(255, 87, 34, 0.9);
-    transform: scale(1.05);
-}
+/* === 访问人数样式 === */
 #visitor-count {
     position: fixed;
     bottom: 20px;
@@ -273,4 +305,7 @@ nav ul li a:hover {
     padding: 10px 20px;
     font-size: 14px;
     z-index: 999;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
